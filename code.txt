@@ -1,0 +1,47 @@
+dotnet new mvc --name mslearningapp
+git init
+git add .
+git commit -m "Initial commit"
+RUN IN CLOUD SHELL:
+---------------------
+wget -q -O - https://dot.net/v1/dotnet-install.sh | bash -s -- --version 3.1.102
+export PATH="~/.dotnet:$PATH"
+echo "export PATH=~/.dotnet:\$PATH" >> ~/.bashrc
+dotnet new mvc --name mslearningapp
+cd mslearningapp
+dotnet run
+curl -kL http://127.0.0.1:5000/
+<div class="text-center">
+     <h1 class="display-4">Welcome</h1>
+     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+ </div>
+
+         </main>
+     </div>
+
+     <footer class="border-top footer text-muted">
+         <div class="container">
+             &copy; 2021 - BestBikeApp - <a href="/Home/Privacy">Privacy</a>
+         </div>
+     </footer>
+     <script src="/lib/jquery/dist/jquery.min.js"></script>
+     <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+
+ </body>
+ </html>
+DEPLOT CODE TO APP SERVICE:
+---------------------------------
+Let's deploy the .NET application with ZIP deploy.
+
+First, use dotnet publish to build the final app files and zip to package them into a zip file.
+cd ~/mslearningapp
+dotnet publish -o pub
+cd pub
+zip -r site.zip *
+Finally, perform the deployment with az webapp deployment source config-zip. Replace <your-app-name> in the following command with the name of your Azure web app and run it.
+az webapp deployment source config-zip \
+    --src site.zip \
+    --resource-group learn-99659270-5815-47df-9ac1-f560e2196939 \
+    --name mslearningapp
+At last verify the deployment

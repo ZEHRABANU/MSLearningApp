@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'mslearningapp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AC8DD4DA47284920A461269BF84A0902 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_58D8FF7DCE344F589BC7A54CE176479E }}
           package: .

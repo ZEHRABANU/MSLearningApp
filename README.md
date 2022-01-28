@@ -1,6 +1,12 @@
 # MSLearningApp
+# THE URL OF PROJECT GITHUB REPOSITORY IS "ZEHRABANU / MSLearningApp"
+# DEMO PROJECT URL IS "https://mslearningapp.azurewebsites.net/"
   DESCRIPTION:
     The MSLearningApp is a learning website which is used to learn about all the details of ASP.NET Core.
+  AZURE SERVICE:
+      This project is based on Website App so to create an app i used "AZURE APP SERVICE WEB APP".
+  AZURE APP SERVICE WEB APP:
+        The APP SERVICE WEB APP lets you quicky build,deploy and scale enterprice-grade web,mobile,API apps running on any platform.It meets rigorious performance,scalability,security and compliance  requirements while using a fully managed platform to perform infrastructure maintainance.Everything you create on Azure is a resource.So, the web app is also a type of resource in azure service.
   EXPLAINATION:
     1.Create web app
    ![creating a web app](https://user-images.githubusercontent.com/92638328/151317611-b4d6b446-3f47-4f61-985f-d7a4be18e81e.png)
